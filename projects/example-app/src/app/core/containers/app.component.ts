@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { AuthActions } from '@example-app/auth/actions';
-import * as fromAuth from '@example-app/auth/reducers';
-import * as fromRoot from '@example-app/reducers';
-import { LayoutActions } from '@example-app/core/actions';
+import { AuthActions } from '../../auth/actions';
+import * as fromAuth from '../../auth/reducers';
+import * as fromRoot from '../../reducers';
+import { LayoutActions } from '../../core/actions';
 
 @Component({
   selector: 'bc-app',
@@ -13,10 +13,22 @@ import { LayoutActions } from '@example-app/core/actions';
   template: `
     <bc-layout>
       <bc-sidenav [open]="showSidenav$ | async" (closeMenu)="closeSidenav()">
-        <bc-nav-item (navigate)="closeSidenav()" *ngIf="loggedIn$ | async" routerLink="/" icon="book" hint="View your book collection">
+        <bc-nav-item
+          (navigate)="closeSidenav()"
+          *ngIf="loggedIn$ | async"
+          routerLink="/"
+          icon="book"
+          hint="View your book collection"
+        >
           My Collection
         </bc-nav-item>
-        <bc-nav-item (navigate)="closeSidenav()" *ngIf="loggedIn$ | async" routerLink="/books/find" icon="search" hint="Find your next book!">
+        <bc-nav-item
+          (navigate)="closeSidenav()"
+          *ngIf="loggedIn$ | async"
+          routerLink="/books/find"
+          icon="search"
+          hint="Find your next book!"
+        >
           Browse Books
         </bc-nav-item>
         <bc-nav-item (navigate)="closeSidenav()" *ngIf="!(loggedIn$ | async)">

@@ -5,8 +5,8 @@ import {
   CollectionPageComponent,
   FindBookPageComponent,
   ViewBookPageComponent,
-} from '@example-app/books/containers';
-import { BookExistsGuard } from '@example-app/books/guards';
+} from '../books/containers';
+import { BookExistsGuard } from '../books/guards';
 
 export const routes: Routes = [
   {

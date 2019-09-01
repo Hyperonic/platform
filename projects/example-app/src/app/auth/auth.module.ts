@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { LoginPageComponent } from '@example-app/auth/containers';
+import { LoginPageComponent } from '../auth/containers';
 import {
   LoginFormComponent,
   LogoutConfirmationDialogComponent,
-} from '@example-app/auth/components';
+} from '../auth/components';
 
-import { AuthEffects } from '@example-app/auth/effects';
-import * as fromAuth from '@example-app/auth/reducers';
-import { MaterialModule } from '@example-app/material';
+import { AuthEffects } from '../auth/effects';
+import * as fromAuth from '../auth/reducers';
+import { MaterialModule } from '../material';
 import { AuthRoutingModule } from './auth-routing.module';
 
 export const COMPONENTS = [

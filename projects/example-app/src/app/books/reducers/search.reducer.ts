@@ -1,7 +1,4 @@
-import {
-  BooksApiActions,
-  FindBookPageActions,
-} from '@example-app/books/actions';
+import { BooksApiActions, FindBookPageActions } from '../../books/actions';
 import { createReducer, on } from '@ngrx/store';
 
 export const searchFeatureKey = 'search';

@@ -4,9 +4,9 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
-import { FindBookPageActions } from '@example-app/books/actions';
-import { Book } from '@example-app/books/models';
-import * as fromBooks from '@example-app/books/reducers';
+import { FindBookPageActions } from '../../books/actions';
+import { Book } from '../../books/models';
+import * as fromBooks from '../../books/reducers';
 
 @Component({
   selector: 'bc-find-book-page',
@@ -16,11 +16,10 @@ import * as fromBooks from '@example-app/books/reducers';
       [query]="searchQuery$ | async"
       [searching]="loading$ | async"
       [error]="error$ | async"
-      (search)="search($event)">
+      (search)="search($event)"
+    >
     </bc-book-search>
-    <bc-book-preview-list
-      [books]="books$ | async">
-    </bc-book-preview-list>
+    <bc-book-preview-list [books]="books$ | async"> </bc-book-preview-list>
   `,
 })
 export class FindBookPageComponent {

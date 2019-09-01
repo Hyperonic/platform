@@ -1,1 +1,1 @@
-export * from '@example-app/app.module';
+export * from './app.module';

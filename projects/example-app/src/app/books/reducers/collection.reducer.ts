@@ -3,7 +3,7 @@ import { createReducer, on } from '@ngrx/store';
 import {
   CollectionApiActions,
   CollectionPageActions,
-} from '@example-app/books/actions';
+} from '../../books/actions';
 
 export const collectionFeatureKey = 'collection';
 

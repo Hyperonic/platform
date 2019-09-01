@@ -3,9 +3,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { SelectedBookPageActions } from '@example-app/books/actions';
-import { Book } from '@example-app/books/models';
-import * as fromBooks from '@example-app/books/reducers';
+import { SelectedBookPageActions } from '../../books/actions';
+import { Book } from '../../books/models';
+import * as fromBooks from '../../books/reducers';
 
 @Component({
   selector: 'bc-selected-book-page',
@@ -15,7 +15,8 @@ import * as fromBooks from '@example-app/books/reducers';
       [book]="book$ | async"
       [inCollection]="isSelectedBookInCollection$ | async"
       (add)="addToCollection($event)"
-      (remove)="removeFromCollection($event)">
+      (remove)="removeFromCollection($event)"
+    >
     </bc-book-detail>
   `,
 })

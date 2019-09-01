@@ -8,9 +8,9 @@ import {
   CollectionApiActions,
   CollectionPageActions,
   SelectedBookPageActions,
-} from '@example-app/books/actions';
-import { Book } from '@example-app/books/models';
-import { BookStorageService } from '@example-app/core/services';
+} from '../../books/actions';
+import { Book } from '../../books/models';
+import { BookStorageService } from '../../core/services';
 
 @Injectable()
 export class CollectionEffects {

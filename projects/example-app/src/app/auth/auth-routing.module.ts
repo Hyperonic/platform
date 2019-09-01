@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginPageComponent } from '@example-app/auth/containers';
+import { LoginPageComponent } from '../auth/containers';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent, data: { title: 'Login' } },

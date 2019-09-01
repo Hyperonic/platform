@@ -11,12 +11,9 @@ import {
   takeUntil,
 } from 'rxjs/operators';
 
-import { Book } from '@example-app/books/models';
-import {
-  BooksApiActions,
-  FindBookPageActions,
-} from '@example-app/books/actions';
-import { GoogleBooksService } from '@example-app/core/services/google-books.service';
+import { Book } from '../../books/models';
+import { BooksApiActions, FindBookPageActions } from '../../books/actions';
+import { GoogleBooksService } from '../../core/services/google-books.service';
 
 /**
  * Effects offer a way to isolate and easily test side-effects within your

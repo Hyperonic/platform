@@ -4,9 +4,9 @@ import {
   Action,
   combineReducers,
 } from '@ngrx/store';
-import * as fromRoot from '@example-app/reducers';
-import * as fromAuth from '@example-app/auth/reducers/auth.reducer';
-import * as fromLoginPage from '@example-app/auth/reducers/login-page.reducer';
+import * as fromRoot from '../../reducers';
+import * as fromAuth from '../../auth/reducers/auth.reducer';
+import * as fromLoginPage from '../../auth/reducers/login-page.reducer';
 
 export const authFeatureKey = 'auth';
 
@@ -34,8 +34,14 @@ export const selectAuthStatusState = createSelector(
   selectAuthState,
   (state: AuthState) => state.status
 );
-export const getUser = createSelector(selectAuthStatusState, fromAuth.getUser);
-export const getLoggedIn = createSelector(getUser, user => !!user);
+export const getUser = createSelector(
+  selectAuthStatusState,
+  fromAuth.getUser
+);
+export const getLoggedIn = createSelector(
+  getUser,
+  user => !!user
+);
 
 export const selectLoginPageState = createSelector(
   selectAuthState,

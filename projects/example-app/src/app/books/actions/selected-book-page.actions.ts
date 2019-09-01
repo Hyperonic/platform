@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-import { Book } from '@example-app/books/models';
+import { Book } from '../../books/models';
 
 /**
  * Add Book to Collection Action

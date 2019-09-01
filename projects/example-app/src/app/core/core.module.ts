@@ -2,17 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from '@example-app/material';
+import { MaterialModule } from '../material';
 import {
   LayoutComponent,
   NavItemComponent,
   SidenavComponent,
   ToolbarComponent,
-} from '@example-app/core/components';
-import {
-  AppComponent,
-  NotFoundPageComponent,
-} from '@example-app/core/containers';
+} from '../core/components';
+import { AppComponent, NotFoundPageComponent } from '../core/containers';
 
 export const COMPONENTS = [
   AppComponent,

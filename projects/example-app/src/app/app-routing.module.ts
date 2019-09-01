@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from '@example-app/auth/services';
-import { NotFoundPageComponent } from '@example-app/core/containers';
+import { NotFoundPageComponent } from './core/containers';
+import { AuthGuard } from './auth/services';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/books', pathMatch: 'full' },
   {
     path: 'books',
-    loadChildren: '@example-app/books/books.module#BooksModule',
+    loadChildren: './books/books.module#BooksModule',
     canActivate: [AuthGuard],
   },
   {

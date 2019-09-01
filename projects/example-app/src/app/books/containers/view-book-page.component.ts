@@ -4,8 +4,8 @@ import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import * as fromBooks from '@example-app/books/reducers';
-import { ViewBookPageActions } from '@example-app/books/actions';
+import * as fromBooks from '../../books/reducers';
+import { ViewBookPageActions } from '../../books/actions';
 
 /**
  * Note: Container components are also reusable. Whether or not

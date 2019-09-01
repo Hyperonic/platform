@@ -19,8 +19,7 @@
       "@ngrx/store-devtools": ["../../modules/store-devtools"],
       "@ngrx/router-store": ["../../modules/router-store"],
       "@ngrx/entity": ["../../modules/entity"],
-      "@ngrx/schematics": ["../../modules/schematics"],
-      "@example-app/*": ["./src/app/*"]
+      "@ngrx/schematics": ["../../modules/schematics"]
     }
   },
   "exclude": [
