@@ -5,9 +5,9 @@ import {
   MetaReducer,
   Action,
   ActionReducerMap,
-} from '@ngrx/store';
+} from '../../../../../modules/store';
 import { environment } from '../../environments/environment';
-import * as fromRouter from '@ngrx/router-store';
+import * as fromRouter from '../../../../../modules/router-store';
 
 /**
  * Every reducer module's default export is the reducer function itself. In

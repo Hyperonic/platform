@@ -1,4 +1,4 @@
-import { createSelector } from '@ngrx/store';
+import { createSelector } from '../../store';
 import { EntityState, EntitySelectors, Dictionary } from './models';
 
 export function createSelectorsFactory<T>() {
@@ -18,7 +18,10 @@ export function createSelectorsFactory<T>() {
         ids.map((id: any) => (entities as any)[id])
     );
 
-    const selectTotal = createSelector(selectIds, ids => ids.length);
+    const selectTotal = createSelector(
+      selectIds,
+      ids => ids.length
+    );
 
     if (!selectState) {
       return {
@@ -30,10 +33,22 @@ export function createSelectorsFactory<T>() {
     }
 
     return {
-      selectIds: createSelector(selectState, selectIds),
-      selectEntities: createSelector(selectState, selectEntities),
-      selectAll: createSelector(selectState, selectAll),
-      selectTotal: createSelector(selectState, selectTotal),
+      selectIds: createSelector(
+        selectState,
+        selectIds
+      ),
+      selectEntities: createSelector(
+        selectState,
+        selectEntities
+      ),
+      selectAll: createSelector(
+        selectState,
+        selectAll
+      ),
+      selectTotal: createSelector(
+        selectState,
+        selectTotal
+      ),
     };
   }
 

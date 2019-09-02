@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 
 export const PERFORM_ACTION = 'PERFORM_ACTION';
 export const REFRESH = 'REFRESH';

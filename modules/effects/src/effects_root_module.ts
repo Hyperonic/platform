@@ -4,7 +4,7 @@ import {
   Store,
   StoreRootModule,
   StoreFeatureModule,
-} from '@ngrx/store';
+} from '../../store';
 import { EffectsRunner } from './effects_runner';
 import { EffectSources } from './effect_sources';
 import { ROOT_EFFECTS } from './tokens';

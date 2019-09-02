@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import {
   defer,
   merge,
@@ -128,31 +128,31 @@ export function act<
                 let projectedCount = 0;
                 return project(input, index).pipe(
                   materialize(),
-                  map(
-                    (notification): Notification<ResultAction> | undefined => {
-                      switch (notification.kind) {
-                        case 'E':
-                          errored = true;
-                          return new Notification(
-                            // TODO: remove any in RxJS 6.5
-                            'N' as any,
-                            error(notification.error, input)
-                          );
-                        case 'C':
-                          completed = true;
-                          return complete
-                            ? new Notification(
-                                // TODO: remove any in RxJS 6.5
-                                'N' as any,
-                                complete(projectedCount, input)
-                              )
-                            : undefined;
-                        default:
-                          ++projectedCount;
-                          return notification;
-                      }
+                  map((notification):
+                    | Notification<ResultAction>
+                    | undefined => {
+                    switch (notification.kind) {
+                      case 'E':
+                        errored = true;
+                        return new Notification(
+                          // TODO: remove any in RxJS 6.5
+                          'N' as any,
+                          error(notification.error, input)
+                        );
+                      case 'C':
+                        completed = true;
+                        return complete
+                          ? new Notification(
+                              // TODO: remove any in RxJS 6.5
+                              'N' as any,
+                              complete(projectedCount, input)
+                            )
+                          : undefined;
+                      default:
+                        ++projectedCount;
+                        return notification;
                     }
-                  ),
+                  }),
                   filter((n): n is NonNullable<typeof n> => n != null),
                   dematerialize(),
                   finalize(() => {

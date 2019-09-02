@@ -15,7 +15,7 @@ import {
   Event,
   RouterEvent,
 } from '@angular/router';
-import { select, Selector, Store } from '@ngrx/store';
+import { select, Selector, Store } from '../../store';
 import { withLatestFrom } from 'rxjs/operators';
 
 import {
@@ -169,8 +169,8 @@ export class StoreRouterConnectingModule {
           useClass: config.serializer
             ? config.serializer
             : config.routerState === RouterState.Minimal
-              ? MinimalRouterStateSerializer
-              : DefaultRouterStateSerializer,
+            ? MinimalRouterStateSerializer
+            : DefaultRouterStateSerializer,
         },
       ],
     };

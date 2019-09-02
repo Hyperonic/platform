@@ -4,7 +4,7 @@ import {
   createFeatureSelector,
   combineReducers,
   Action,
-} from '@ngrx/store';
+} from '../../../../../../modules/store';
 import * as fromSearch from '../../books/reducers/search.reducer';
 import * as fromBooks from '../../books/reducers/books.reducer';
 import * as fromCollection from '../../books/reducers/collection.reducer';

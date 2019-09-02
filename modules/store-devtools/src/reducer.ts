@@ -6,7 +6,7 @@ import {
   ReducerManager,
   UPDATE,
   INIT,
-} from '@ngrx/store';
+} from '../../store';
 import { difference, liftAction, isActionFiltered } from './utils';
 import * as DevtoolsActions from './actions';
 import { StoreDevtoolsConfig, StateSanitizer } from './config';
@@ -189,8 +189,7 @@ export function liftReducerWith(
       computedStates,
       isLocked,
       isPaused,
-    } =
-      liftedState || initialLiftedState;
+    } = liftedState || initialLiftedState;
 
     if (!liftedState) {
       // Prevent mutating initialLiftedState

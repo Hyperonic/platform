@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import {
+  Actions,
+  createEffect,
+  ofType,
+} from '../../../../../../modules/effects';
 import { asyncScheduler, EMPTY as empty, of } from 'rxjs';
 import {
   catchError,

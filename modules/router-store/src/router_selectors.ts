@@ -1,4 +1,4 @@
-import { createSelector } from '@ngrx/store';
+import { createSelector } from '../../store';
 import { RouterStateSelectors } from './models';
 import { RouterReducerState } from './reducer';
 
@@ -12,28 +12,37 @@ export function getSelectors<V>(
     selectState,
     router => router && router.state
   );
-  const selectCurrentRoute = createSelector(selectRouterState, routerState => {
-    if (!routerState) {
-      return undefined;
+  const selectCurrentRoute = createSelector(
+    selectRouterState,
+    routerState => {
+      if (!routerState) {
+        return undefined;
+      }
+      let route = routerState.root;
+      while (route.firstChild) {
+        route = route.firstChild;
+      }
+      return route;
     }
-    let route = routerState.root;
-    while (route.firstChild) {
-      route = route.firstChild;
-    }
-    return route;
-  });
+  );
   const selectQueryParams = createSelector(
     selectCurrentRoute,
     route => route && route.queryParams
   );
   const selectQueryParam = (param: string) =>
-    createSelector(selectQueryParams, params => params && params[param]);
+    createSelector(
+      selectQueryParams,
+      params => params && params[param]
+    );
   const selectRouteParams = createSelector(
     selectCurrentRoute,
     route => route && route.params
   );
   const selectRouteParam = (param: string) =>
-    createSelector(selectRouteParams, params => params && params[param]);
+    createSelector(
+      selectRouteParams,
+      params => params && params[param]
+    );
   const selectRouteData = createSelector(
     selectCurrentRoute,
     route => route && route.data

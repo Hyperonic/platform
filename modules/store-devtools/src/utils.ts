@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { Observable } from 'rxjs';
 
 import * as Actions from './actions';

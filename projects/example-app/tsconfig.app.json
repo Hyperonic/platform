@@ -12,15 +12,7 @@
     "target": "es5",
     "module": "es2015",
     "types": [],
-    "baseUrl": ".",
-    "paths": {
-      "@ngrx/effects": ["../../modules/effects"],
-      "@ngrx/store": ["../../modules/store"],
-      "@ngrx/store-devtools": ["../../modules/store-devtools"],
-      "@ngrx/router-store": ["../../modules/router-store"],
-      "@ngrx/entity": ["../../modules/entity"],
-      "@ngrx/schematics": ["../../modules/schematics"]
-    }
+    "baseUrl": "."
   },
   "exclude": [
     "../../node_modules",

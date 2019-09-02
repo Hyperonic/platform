@@ -4,7 +4,7 @@ import {
   ActionCreator,
   Creator,
   ScannedActionsSubject,
-} from '@ngrx/store';
+} from '../../store';
 import { Observable, OperatorFunction, Operator } from 'rxjs';
 import { filter } from 'rxjs/operators';
 

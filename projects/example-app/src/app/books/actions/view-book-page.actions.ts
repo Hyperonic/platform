@@ -1,4 +1,4 @@
-import { createAction, props } from '@ngrx/store';
+import { createAction, props } from '../../../../../../modules/store';
 
 export const selectBook = createAction(
   '[View Book Page] Select Book',

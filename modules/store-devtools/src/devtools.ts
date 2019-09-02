@@ -6,7 +6,7 @@ import {
   INITIAL_STATE,
   ReducerObservable,
   ScannedActionsSubject,
-} from '@ngrx/store';
+} from '../../store';
 import {
   merge,
   Observable,

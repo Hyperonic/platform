@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '../../../../../modules/store';
+import { EffectsModule } from '../../../../../modules/effects';
 import { LoginPageComponent } from '../auth/containers';
 import {
   LoginFormComponent,

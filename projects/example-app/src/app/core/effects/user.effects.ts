@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { fromEvent, merge, timer } from 'rxjs';
 import { map, switchMapTo } from 'rxjs/operators';
 
-import { createEffect } from '@ngrx/effects';
+import { createEffect } from '../../../../../../modules/effects';
 import { UserActions } from '../../core/actions';
 
 @Injectable()

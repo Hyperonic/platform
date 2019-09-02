@@ -1,4 +1,4 @@
-import { ActionReducer, Action } from '@ngrx/store';
+import { ActionReducer, Action } from '../../store';
 import { InjectionToken, Type } from '@angular/core';
 
 export type ActionSanitizer = (action: Action, id: number) => Action;

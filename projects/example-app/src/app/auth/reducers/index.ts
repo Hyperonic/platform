@@ -3,7 +3,7 @@ import {
   createFeatureSelector,
   Action,
   combineReducers,
-} from '@ngrx/store';
+} from '../../../../../../modules/store';
 import * as fromRoot from '../../reducers';
 import * as fromAuth from '../../auth/reducers/auth.reducer';
 import * as fromLoginPage from '../../auth/reducers/login-page.reducer';

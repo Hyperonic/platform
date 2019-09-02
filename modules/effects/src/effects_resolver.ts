@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { merge, Notification, Observable } from 'rxjs';
 import { ignoreElements, map, materialize, catchError } from 'rxjs/operators';
 

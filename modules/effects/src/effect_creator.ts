@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { EffectMetadata, EffectConfig } from './models';
 
 const CREATE_EFFECT_METADATA_KEY = '__@ngrx/effects_create__';

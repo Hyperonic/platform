@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 
 import { tap, filter, map, mergeMap } from 'rxjs/operators';
 
-import { createEffect } from '@ngrx/effects';
+import { createEffect } from '../../../../../../modules/effects';
 
 @Injectable()
 export class RouterEffects {

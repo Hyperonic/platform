@@ -1,4 +1,4 @@
-import { props, createAction } from '@ngrx/store';
+import { props, createAction } from '../../../../../../modules/store';
 import { User } from '../../auth/models';
 
 export const loginSuccess = createAction(

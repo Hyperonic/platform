@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router';
-import { Store, select } from '@ngrx/store';
+import { Store, select } from '../../../../../../modules/store';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 import { AuthApiActions } from '../../auth/actions';

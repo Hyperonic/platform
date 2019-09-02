@@ -1,4 +1,4 @@
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import {
   ROUTER_CANCEL,
   ROUTER_ERROR,

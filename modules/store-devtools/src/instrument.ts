@@ -1,5 +1,5 @@
 import { InjectionToken, ModuleWithProviders, NgModule } from '@angular/core';
-import { ReducerManagerDispatcher, StateObservable } from '@ngrx/store';
+import { ReducerManagerDispatcher, StateObservable } from '../../store';
 import { Observable } from 'rxjs';
 
 import {

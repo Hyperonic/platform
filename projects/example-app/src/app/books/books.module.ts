@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '../../../../../modules/effects';
+import { StoreModule } from '../../../../../modules/store';
 
 import { BooksRoutingModule } from '../books/books-routing.module';
 import {

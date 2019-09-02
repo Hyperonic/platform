@@ -1,4 +1,4 @@
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on } from '../../../../../../modules/store';
 import { AuthApiActions, AuthActions } from '../../auth/actions';
 import { User } from '../../auth/models';
 

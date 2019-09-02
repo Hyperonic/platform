@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { select, Store } from '@ngrx/store';
+import { select, Store } from '../../../../../../modules/store';
 import { Observable } from 'rxjs';
 
 import { AuthActions } from '../../auth/actions';

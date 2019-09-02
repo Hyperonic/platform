@@ -1,5 +1,5 @@
 import { ErrorHandler } from '@angular/core';
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 import { Notification, Observable } from 'rxjs';
 
 export interface EffectNotification {

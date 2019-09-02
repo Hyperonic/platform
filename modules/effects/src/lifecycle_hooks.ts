@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { EffectNotification } from '.';
-import { Action } from '@ngrx/store';
+import { Action } from '../../store';
 
 /**
  * @description

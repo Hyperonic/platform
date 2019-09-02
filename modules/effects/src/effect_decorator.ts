@@ -1,4 +1,4 @@
-import { compose } from '@ngrx/store';
+import { compose } from '../../store';
 import { EffectMetadata, EffectConfig } from './models';
 import { getSourceForInstance } from './utils';
 

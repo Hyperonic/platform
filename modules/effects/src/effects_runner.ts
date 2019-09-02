@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store } from '../../store';
 import { Subscription } from 'rxjs';
 
 import { EffectSources } from './effect_sources';
